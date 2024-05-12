@@ -115,7 +115,7 @@ void LeanStore::startProfilingThread()
    std::thread profiling_thread([&]() {
       cpu_set_t cpuset;
       CPU_ZERO(&cpuset);
-      CPU_SET(63, &cpuset);
+      CPU_SET(0, &cpuset);
       auto thread = pthread_self();
       int s = pthread_setaffinity_np(thread, sizeof(cpu_set_t), &cpuset);
       if (s != 0) {

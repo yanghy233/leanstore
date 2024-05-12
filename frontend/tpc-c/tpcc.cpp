@@ -244,6 +244,7 @@ int main(int argc, char** argv)
 {
    gflags::SetUsageMessage("Leanstore TPC-C");
    gflags::ParseCommandLineFlags(&argc, &argv, true);
+   // sleep(5);
    // -------------------------------------------------------------------------------------
    using namespace mean;
    IoOptions ioOptions("auto", FLAGS_ssd_path);
